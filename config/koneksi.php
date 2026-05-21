@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "password123";
 $dbname = "project_crud";
 
 // Create connection
