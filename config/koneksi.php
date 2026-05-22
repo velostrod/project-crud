@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "password123";
+$password = "";
 $dbname = "project_crud";
 
 // Create connection
@@ -13,4 +13,3 @@ if (!$koneksi) {
 }
 
 // echo "Connected successfully";
-?>
