@@ -22,3 +22,8 @@ function getStatus(int $status): string
 //         break;
 //     }
 // }
+
+// function inputFailed($status)
+// {
+//     return "<span class='text-danger'>$status</span>";
+// }

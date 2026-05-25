@@ -12,6 +12,8 @@ if (isset($_GET['delete'])) {
     exit();
 }
 
+
+
 ?>
 
 <div class="card">

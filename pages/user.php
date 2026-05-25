@@ -30,8 +30,6 @@ if (isset($_GET['idDelete'])) {
             ?>
             <table class="table table-bordered">
                 <thead>
-
-
                     <tr>
                         <th>No</th>
                         <th>Name</th>
