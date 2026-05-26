@@ -50,7 +50,7 @@ if (isset($_POST['edit'])) {
 
     <div class="card-body">
 
-        <form action="" method="post">
+        <form action="" method="post" enctype="">
             <div class="row g-3">
                 <?php
                 if (isset($_GET['status']) && $_GET['status'] == 'warning') {
