@@ -29,9 +29,13 @@
 <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 <script src="assets/template/assets/js/config.js"></script>
 
+<<<<<<< HEAD
 <link href="https://cdn.jsdelivr.net/npm/tinymce@7/skins/ui/oxide/content.min.css" rel="stylesheet">
 
 <!-- koneksi ke midtrans frontend -->
 <script type="text/javascript"
     src="https://app.sandbox.midtrans.com/snap/snap.js"
     data-client-key="ciyee kosong"></script>
+=======
+<link href="https://cdn.jsdelivr.net/npm/tinymce@7/skins/ui/oxide/content.min.css" rel="stylesheet">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149

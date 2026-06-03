@@ -4,6 +4,7 @@ $categories = mysqli_fetch_all($selectCategory, MYSQLI_ASSOC);
 
 $selectProduct = mysqli_query($koneksi, "SELECT products.*, categories.category_name FROM products LEFT JOIN categories ON products.category_id = categories.id WHERE products.is_active = 1 ORDER BY id DESC");
 $products = mysqli_fetch_all($selectProduct, MYSQLI_ASSOC);
+<<<<<<< HEAD
 
 
 if (isset($_POST['process_payment'])) {
@@ -79,16 +80,27 @@ if (isset($_POST['process_payment'])) {
     }
 }
 
+=======
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 ?>
 <div class="row">
 
     <div class="col-lg-8 p-4">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
         <ul class="nav nav-tabs" role="tablist">
             <?php
             foreach ($categories as $key => $cat) {
             ?>
                 <li class="nav-item">
+<<<<<<< HEAD
                     <button class="nav-link <?= $key === 0 ? 'active' : '' ?>" data-bs-toggle="tab"
+=======
+                    <button class="nav-link <?= $key === 0 ? 'active' : '' ?>"
+                        data-bs-toggle="tab"
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                         data-bs-target="#tab-pane-<?= $cat['id'] ?>">
                         <?= $cat['category_name'] ?>
                     </button>
@@ -99,9 +111,17 @@ if (isset($_POST['process_payment'])) {
         </ul>
 
         <div class="tab-content mt-3">
+<<<<<<< HEAD
             <?php
             foreach ($categories as $key => $cat) { ?>
                 <div class="tab-pane fade <?= $key === 0 ? 'show active' : '' ?> " id="tab-pane-<?= $cat['id'] ?>">
+=======
+
+            <?php
+            foreach ($categories as $key => $cat) {
+            ?>
+                <div class="tab-pane fade <?= $key === 0 ? 'show active' : '' ?>" id="tab-pane-<?= $cat['id'] ?>">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 
                     <div class="d-flex justify-content-between align-items-center mb-3">
 
@@ -130,7 +150,11 @@ if (isset($_POST['process_payment'])) {
 
                         <?php
                         foreach ($products as $product) {
+<<<<<<< HEAD
                             if ($product["category_id"] == $cat["id"] || $key == 0) {
+=======
+                            if ($product['category_id'] == $cat['id'] || $key == 0) {
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                         ?>
                                 <div class="col-md-4">
 
@@ -145,8 +169,13 @@ if (isset($_POST['process_payment'])) {
                                             </small>
 
                                             <div class="mt-2">
+<<<<<<< HEAD
                                                 <img src="assets/uploads/<?= $product['product_image'] ?>" class="img-fluid"
                                                     style="max-height:150px; object-fit:cover;">
+=======
+                                                <img src="assets/uploads/<?= $product['product_image'] ?>"
+                                                    class="img-fluid" style="max-height:150px; object-fit:cover;">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                                             </div>
 
                                         </div>
@@ -158,12 +187,23 @@ if (isset($_POST['process_payment'])) {
                                             </h6>
 
                                             <p class="text-muted">
+<<<<<<< HEAD
                                                 Ready <?= $product['qty'] ?> <?= $product['unit'] ?>
                                             </p>
                                         </div>
                                         <div class="px-3 pb-3 d-flex justify-content-center gap-2">
                                             <button type="button" class="btn btn-primary btn-sm btn-add-cart"
                                                 data-id="<?= $product['id'] ?>" data-name="<?= $product['product_name'] ?>"
+=======
+                                                Ready Stock <?= $product['qty'] ?> <?= $product['unit'] ?>
+                                            </p>
+                                        </div>
+                                        <div class="px-3 pb-3 d-flex justify-content-center gap-2">
+
+                                            <button type="button" class="btn btn-primary btn-sm btn-add-cart"
+                                                data-id="<?= $product['id'] ?>"
+                                                data-name="<?= $product['product_name'] ?>"
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                                                 data-price="<?= $product['price'] ?>"
                                                 data-image="assets/uploads/<?= $product['product_image'] ?>">
                                                 Add To Cart
@@ -173,6 +213,7 @@ if (isset($_POST['process_payment'])) {
                                     </div>
 
                                 </div>
+<<<<<<< HEAD
                             <?php
                             } ?>
 
@@ -183,12 +224,30 @@ if (isset($_POST['process_payment'])) {
             <?php } ?>
 
 
+=======
+                        <?php
+
+                            }
+                        }
+                        ?>
+
+                    </div>
+
+                </div>
+            <?php
+            }
+            ?>
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
         </div>
 
     </div>
 
 
+<<<<<<< HEAD
     <div class=" col-lg-4 p-4">
+=======
+    <div class="col-lg-4 p-4">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -198,11 +257,16 @@ if (isset($_POST['process_payment'])) {
 
         <div class="card p-3 mt-3 shadow-sm">
 
+<<<<<<< HEAD
 
             <div id="order-items" style="max-height: 350px; overflow-y: auto;">
 
 
 
+=======
+            <div id="order-items" style="max-height: 350px; overflow-y: auto;">
+
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
             </div>
 
             <div class="border-top pt-3 mt-3">
@@ -230,8 +294,12 @@ if (isset($_POST['process_payment'])) {
             </div>
 
             <div class="mt-3 d-flex gap-2">
+<<<<<<< HEAD
                 <button class="btn btn-success w-100" id="btn-payment" type="button" data-bs-toggle="modal"
                     data-bs-target="#paymentModal">
+=======
+                <button class="btn btn-success w-100" id="btn-payment" type="button" data-bs-toggle="modal" data-bs-target="#paymentModal">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                     Payment
                 </button>
             </div>
@@ -242,23 +310,35 @@ if (isset($_POST['process_payment'])) {
 
 </div>
 
+<<<<<<< HEAD
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+=======
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg rounded-4">
 
             <div class="modal-header bg-primary text-white rounded-top-4">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Detail Book</h1>
+<<<<<<< HEAD
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
+=======
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
             </div>
 
             <div class="modal-body p-4">
                 <div class="row">
 
                     <div class="col-md-5 text-center mb-3 mb-md-0">
+<<<<<<< HEAD
                         <img id="modalImage" src="assets/img/default.jpg" alt="Book Image"
                             class="img-fluid rounded-4 shadow-sm" style="max-height: 300px; object-fit: cover;">
+=======
+                        <img id="modalImage" src="assets/img/default.jpg" alt="Book Image" class="img-fluid rounded-4 shadow-sm" style="max-height: 300px; object-fit: cover;">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                     </div>
 
                     <div class="col-md-7">
@@ -305,13 +385,18 @@ if (isset($_POST['process_payment'])) {
     </div>
 </div>
 
+<<<<<<< HEAD
 <div class="modal fade" id="paymentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="paymentModalLabel" aria-hidden="true">
+=======
+<div class="modal fade" id="paymentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
     <div class="modal-dialog modal-xl">
         <div class="modal-content rounded-4 shadow-lg border-0">
 
             <div class="modal-header bg-success text-white rounded-top-4">
                 <h1 class="modal-title fs-5" id="paymentModalLabel">Payment Method</h1>
+<<<<<<< HEAD
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
@@ -325,25 +410,49 @@ if (isset($_POST['process_payment'])) {
                         <input type="text" class="form-control" name="customer_name" placeholder="isi nama anda ..."
                             required>
                     </div>
+=======
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form action="" method="POST">
+                <input type="text" name="cart-data" id="cart-data" class="form-control">
+                <div class="modal-body p-4">
+
+                    <h5 class="mb-3">Pilih Metode Pembayaran</h5>
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="w-100">
+<<<<<<< HEAD
                                 <input type="radio" name="payment_method" value="CASH" class="payment-option" checked>
                                 <div class="card p-4 shadow-sm border payment-card h-100">
                                     <h4 class="text-success">CASH</h4>
                                     <p class="text-muted mb-0">Pembayaran Via Kasir.</p>
+=======
+                                <input type="radio" name="payment_method" value="COD" class="d-none payment-option" checked>
+                                <div class="card p-4 shadow-sm border payment-card h-100">
+                                    <h4 class="text-success">COD</h4>
+                                    <p class="text-muted mb-0">Bayar di tempat saat buku diterima.</p>
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                                 </div>
                             </label>
                         </div>
 
                         <div class="col-md-6">
                             <label class="w-100">
+<<<<<<< HEAD
                                 <input type="radio" name="payment_method" value="MIDTRANS" class="payment-option">
                                 <div class="card p-4 shadow-sm border payment-card h-100">
                                     <h4 class="text-primary">Midtrans</h4>
                                     <p class="text-muted mb-0">Pembayaran online via payment
                                         gateway.</p>
+=======
+                                <input type="radio" name="payment_method" value="MIDTRANS" class="d-none payment-option">
+                                <div class="card p-4 shadow-sm border payment-card h-100">
+                                    <h4 class="text-primary">Midtrans</h4>
+                                    <p class="text-muted mb-0">Pembayaran online via payment gateway.</p>
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                                 </div>
                             </label>
                         </div>
@@ -384,8 +493,12 @@ if (isset($_POST['process_payment'])) {
                             <div class="alert alert-info rounded-3 mb-0">
                                 <strong>Catatan:</strong><br>
                                 - Jika memilih <b>COD</b>, pesanan akan langsung diproses.<br>
+<<<<<<< HEAD
                                 - Jika memilih <b>Midtrans</b>, nanti bisa diarahkan ke payment
                                 gateway.
+=======
+                                - Jika memilih <b>Midtrans</b>, nanti bisa diarahkan ke payment gateway.
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                             </div>
                         </div>
                     </div>
@@ -405,6 +518,7 @@ if (isset($_POST['process_payment'])) {
 </div>
 
 <script>
+<<<<<<< HEAD
     // looping product-card
     // tanpa evemt delegation
 
@@ -417,6 +531,20 @@ if (isset($_POST['process_payment'])) {
     // event delegation
 
     let cart = [];
+=======
+    // looping product card
+    // tanpa event delegation
+    // documnt.querySelectorAll('.product-card').forEach((button) => {
+    //     button.addEventListener('click', function() {
+    //         this.getAttribute('data-id');
+    //     })
+
+    // });
+
+    // event
+    let cart = [];
+
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
     document.addEventListener('click', function(e) {
         if (e.target && e.target.classList.contains('btn-add-cart')) {
             const id = e.target.getAttribute('data-id');
@@ -437,6 +565,7 @@ if (isset($_POST['process_payment'])) {
                 })
             }
             renderCart();
+<<<<<<< HEAD
 
         }
 
@@ -457,13 +586,29 @@ if (isset($_POST['process_payment'])) {
 
         if (cart.length === 0) {
             containerCart.innerHTML = "<p class=' text-muted text-center py-3'>Cart empty</p>"
+=======
+        }
+        // jika cart nya sama valuenya dengan yang card dikiri dari button atau
+        // sudah ada
+    })
+
+    function renderCart() {
+        const containerCart = document.getElementById('order-items');
+        containerCart.innerHTML = "";
+
+        if (cart.length === 0) {
+            containerCart.innerHTML = "<p class = 'text-muted text-center py-3'>Cart Emppty</p>"
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
             updateCart();
             return;
         }
 
+<<<<<<< HEAD
 
 
         // cart.forEach((value,index) => {
+=======
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
         cart.forEach(value => {
             const itemHtml = `
                 <div class="card p-2 mb-2 border-0 shadow-sm">
@@ -471,8 +616,12 @@ if (isset($_POST['process_payment'])) {
                     <div class="d-flex justify-content-between align-items-center">
 
                         <div class="d-flex align-items-center gap-3">
+<<<<<<< HEAD
                             <img class="rounded-circle" src="${value.image}" width="45" height="45"
                                 style="object-fit: cover;">
+=======
+                            <img class="rounded-circle" src="${value.image}" width="45" height="45" style="object-fit: cover;">
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 
                             <div>
                                 <div class="fw-semibold">${value.name}</div>
@@ -506,9 +655,13 @@ if (isset($_POST['process_payment'])) {
 
                 </div>
             `
+<<<<<<< HEAD
 
 
             // containerCart.insertAdjacentElement(posisi, elemenya)
+=======
+            // containerCart.innerHTML = itemHtml
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
             containerCart.insertAdjacentHTML("beforeend", itemHtml)
         })
 
@@ -516,6 +669,7 @@ if (isset($_POST['process_payment'])) {
     }
 
     document.getElementById('order-items').addEventListener('click', function(e) {
+<<<<<<< HEAD
         const id = e.target.getAttribute('data-id')
         if (!id) return;
 
@@ -529,12 +683,29 @@ if (isset($_POST['process_payment'])) {
             } else {
                 // qty cuma 1 terus klik minus button maka data menu di section cart hilang juga
                 // splice(index,1)
+=======
+        const id = e.target.getAttribute('data-id');
+        if (!id) return;
+
+        const itemIndex = cart.findIndex(item => item.id === id);
+        if (e.target.classList.contains('btn-plus')) {
+            cart[itemIndex].qty += 1;
+        } else if (e.target.classList.contains('btn-minus')) {
+            // jika card qty cuman 1, makan akan hilang
+            if (cart[itemIndex].qty > 1) {
+                cart[itemIndex].qty -= 1;
+
+            } else {
+                // qty cuman 1, kemudian product di cart akan dihilangkan
+                // splice (index, 1)
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
                 cart.splice(itemIndex, 1)
             }
         } else if (e.target.classList.contains('btn-delete')) {
             cart.splice(itemIndex, 1)
         }
 
+<<<<<<< HEAD
         renderCart()
     })
 
@@ -542,6 +713,15 @@ if (isset($_POST['process_payment'])) {
         let subtotal = 0
         let tax = 0
         let discount = 0
+=======
+        renderCart();
+    })
+
+    function updateCart() {
+        let subtotal = 0;
+        let tax = 0;
+        let discount = 0;
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 
         cart.forEach(item => {
             subtotal += item.price * item.qty;
@@ -554,6 +734,7 @@ if (isset($_POST['process_payment'])) {
             return "Rp. " + number.toLocaleString('id-ID')
         }
 
+<<<<<<< HEAD
         document.getElementById('subtotal').innerHTML = formatRupiah(subtotal)
         document.getElementById('tax').innerHTML = formatRupiah(tax)
         document.getElementById('discount').innerHTML = formatRupiah(discount)
@@ -568,11 +749,28 @@ if (isset($_POST['process_payment'])) {
                 spans[3].innerText = formatRupiah(tax)
                 spans[5].innerText = "-" + formatRupiah(discount)
                 spans[7].innerText = formatRupiah(total)
+=======
+        document.getElementById('subtotal').innerText = formatRupiah(subtotal);
+        document.getElementById('tax').innerText = formatRupiah(tax);
+        document.getElementById('discount').innerText = formatRupiah(discount);
+        document.getElementById('total-bill').innerText = formatRupiah(total);
+
+        const cartModal = document.querySelector('#paymentModal .border.rounded-3')
+        // jika cart modal terbuka
+        if (cartModal) {
+            const spans = cartModal.querySelectorAll('span');
+            if (spans.length >= 8) {
+                spans[1].innerText = formatRupiah(subtotal);
+                spans[3].innerText = formatRupiah(tax);
+                spans[5].innerText = formatRupiah(discount);
+                spans[7].innerText = formatRupiah(total);
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
             }
         }
 
         document.getElementById('cart-data').value = JSON.stringify(cart);
         // json : javascript object notation
+<<<<<<< HEAD
     }
 
     document.getElementById('btn-payment').addEventListener('click', () => {
@@ -629,4 +827,18 @@ if (isset($_POST['process_payment'])) {
             }
         });
     });
+=======
+
+    }
+
+    document.getElementById('btn-payment').addEventListener('click', (e) => {
+        if (cart.length === 0) {
+            alert('Cart is empty');
+
+            // stopPropagation(): agar modal tidak muncul
+            e.stopPropagation();
+
+        }
+    })
+>>>>>>> 1a9c46f30b70ba5cef55fa79636637afd328d149
 </script>
